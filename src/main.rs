@@ -1,5 +1,7 @@
+mod net;
 use net::Server;
 
 fn main() {
-    Server.doSomething();
+    let server = Server::new();
+    println!("{}", server.get_hello());
 }
