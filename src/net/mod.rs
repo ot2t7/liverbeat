@@ -1,2 +1,2 @@
-mod server;
-pub use server::Server;
+pub mod server;
+pub mod packet;

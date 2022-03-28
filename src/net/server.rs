@@ -1,15 +1,18 @@
 use laminar::{SocketEvent, Socket, ErrorKind};
 use std::thread;
 
+use super::packet;
+
 pub struct Server {
     
 }
 
 impl Server {
-    pub fn new(something: String) -> () {
-        
+    pub fn new() -> () {
+        packet::hello();
     }
 
+    /// Makes the server listen to a specific port
     pub fn listen(self, port: u16) -> Result<(), ErrorKind> {
         let server_thread = thread::spawn(move || -> Result<(), ErrorKind> {
             // Create the socket

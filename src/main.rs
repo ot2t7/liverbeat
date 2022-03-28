@@ -1,6 +1,7 @@
 mod net;
-use net::Server;
+mod utils;
+use net::server::Server;
 
 fn main() {
-    let server = Server::new(String::from("Wassup"));
+    let server = Server::new();
 }
